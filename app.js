@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 
 const app = express();
 
+// app.use('/api/auth', require('./routes/auth.routes.js'));
+
 const PORT = config.get('port') || 3000;
 
 async function start() {
@@ -17,7 +19,7 @@ async function start() {
 
       app.listen(PORT, () => console.log(`App has been started on port ${PORT}...`));
    } catch (error) {
-      console.log('Server error', error.message);
+      console.log('Server error: ', error.message);
       process.exit(1);
    }
 }
