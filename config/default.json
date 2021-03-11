@@ -1,4 +1,5 @@
 {
    "port": 5000,
-   "mongoURI": "mongodb+srv://Ervin:w6iFF-UMKQcMZ!K@cluster0.zirkq.mongodb.net/app?retryWrites=true&w=majority"
+   "mongoURI": "mongodb+srv://Ervin:w6iFF-UMKQcMZ!K@cluster0.zirkq.mongodb.net/app?retryWrites=true&w=majority",
+   "jwtSecret": "ervin fullstack developer"
 }
