@@ -1,1 +1,5 @@
 @import "../node_modules/materialize-css/dist/css/materialize.min.css";
+
+.auth-page-btn {
+  margin: .2rem;
+}
