@@ -4,9 +4,10 @@ const mongoose = require('mongoose');
 
 const app = express();
 
+app.use(express.json({extended: true}))
 app.use('/api/auth', require('./routes/auth.routes.js'));
 
-const PORT = config.get('port') || 3000;
+const PORT = config.get('port') || 5000;
 
 async function start() {
    try {
