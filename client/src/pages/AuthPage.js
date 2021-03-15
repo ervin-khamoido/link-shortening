@@ -17,6 +17,10 @@ export const  AuthPage = () => {
       clearError();
    }, [error, message, clearError]);
 
+   useEffect(() => {
+      window.M.updateTextFields();
+   }, [])
+
    const changeHandler = event => {
       setForm({
          ...form, 
@@ -45,7 +49,7 @@ export const  AuthPage = () => {
 
             <div className="card blue-grey darken-1">
             <div className="card-content white-text">
-               <span className="card-title">Authorization</span>
+               <span className="auth-title card-title">Authorization</span>
 
                <div>
                   <div className="input-field">

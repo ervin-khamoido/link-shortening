@@ -3,3 +3,9 @@
 .auth-page-btn {
   margin: .2rem;
 }
+.auth-title {
+  margin-bottom: 2rem !important;
+}
+.navbar {
+  padding: 0 3rem;
+}
