@@ -1,10 +1,12 @@
 import { useCallback, useContext, useEffect, useState } from "react"
 import {useParams} from 'react-router-dom';
+import { LinkCard } from "../components/LinkCard";
 import { Loader } from "../components/Loader";
+import { AuthContext } from "../context/AuthContext";
 import { useHttp } from "../hooks/http.hook";
 
 export const DetailPage = () => {
-   const {token} = useContext();
+   const {token} = useContext(AuthContext);
    const {request, loading} = useHttp();
    const [link, setLink] = useState(null);
    const linkId = useParams().id;
@@ -29,7 +31,7 @@ export const DetailPage = () => {
 
    return (
       <>
-         {!loading && link && <LinkCard />}
+         {!loading && link && <LinkCard link={link} />}
       </>
    )
 }
