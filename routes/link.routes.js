@@ -8,7 +8,7 @@ const router = Router();
 
 router.post('/generate', authMiddleware, async (req, res) => {
    try {
-      const baseURL = config.get('baseURL');
+      const baseURL = process.env.BASE_URL || config.get('baseURL');
       const {
          from
       } = req.body;
